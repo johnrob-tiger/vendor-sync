@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/client",
+    "packages/scss"
+  ],
+  "devDependencies": {
+    "lerna": "^6.0.3"
+  }
+}

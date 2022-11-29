@@ -1,0 +1,53 @@
+.calendar-layout {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.nav {
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 150px;
+    padding: 50px 0;
+    background-color: var(--nav-bg, #fff);
+    color: var(--nav-text, #000);
+}
+
+.nav a {
+    display: grid;
+    place-content: center;
+    border-radius: 20px;    
+    text-decoration: none;
+    padding: 25px;
+    color: var(--nav-item-text, #555);
+}
+
+.nav a.active {
+    color: var(--nav-item-text-active, #003399);
+    background-color: var(--nav-item-bg, #DDE8FF);
+}
+
+.nav svg {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto;
+}
+
+.content {
+    position: relative;
+    flex: 1;
+}
+
+@media screen and (max-width: 640px) {
+    .nav a {
+        padding: 8px;
+    }
+    .nav {
+        display: none;
+    }
+}

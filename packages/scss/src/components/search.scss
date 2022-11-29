@@ -1,0 +1,30 @@
+@import "../variables";
+
+.search-box {
+    background-color: var(--surface-background-color);
+    color: var(--surface-text-color);    
+    display: flex;
+    margin-bottom: 50px;
+    border-radius: 100px;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        margin: 12px;
+        stroke: var(--surface-light-text-color);
+    }
+
+    input {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: 12px 0;
+        padding-left: 0;
+        border: none;
+        background: none;
+        font: inherit;
+        width: calc(100% - 48px);
+        outline: none;
+        color: inherit;
+    }
+}

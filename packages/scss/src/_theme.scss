@@ -1,0 +1,36 @@
+body {
+    background-color: var(--app-background-color);
+    color: var(--app-text-color);
+}
+
+.app {
+    &__header {
+        background-color: var(--surface-background-color);
+
+        nav {
+            a {
+                color: var(--surface-light-text-color);
+                transition: background-color 0.2s, color 0.2s;
+
+                &:hover,
+                &.active {
+                    color: var(--surface-text-color);
+                }
+            }
+        }
+    }
+
+    &__events {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-on-primary-color);
+
+        li {
+            background-color: var(--list-item-background-color);
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: var(--list-item-background-hover-color);
+            }
+        }
+    }
+}

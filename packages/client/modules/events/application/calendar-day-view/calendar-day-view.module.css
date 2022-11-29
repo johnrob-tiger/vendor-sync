@@ -1,0 +1,128 @@
+.day-view-calendar {
+    flex: 1;
+    display: flex;
+    border-radius: 20px;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 24px;
+    font-size: 1em;
+}
+
+.time-slots li {
+    position: relative;
+}
+
+.time-slots li:nth-child(even):not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 16px;
+}
+
+.time-slots li span {
+    cursor: pointer;
+}
+
+.time-slots li span:hover {
+    text-decoration: underline;
+}
+
+.events {
+    position: relative;
+    display: flex;    
+    background-color: #fff;
+    color: #000;
+    flex: 1;
+    width: 100%;
+}
+
+.events ul {
+    position: absolute;
+}
+
+.events ul > li {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    margin-left: 16px;
+    font-size: .8em;
+    text-align: left;
+    border-left-width: 8px;
+    border-left-color: #003399;
+    cursor: pointer;
+}
+
+.events ul > li:hover {
+    background-color: rgba(#003399, .2);
+}
+
+.event {
+    padding: 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 580px;
+    background-color: var(--events-bg, #003399);
+    color: var(--events-text, #fff);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.day-view ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;   
+    font-size: 1em; 
+}
+
+.day-view ul li {
+    position: relative;
+    height: 50px; 
+}
+
+.day-view-calendar ul li.hour {
+    font-weight: 600;
+}
+
+.day-view-calendar ul.time-slots li {
+    border-right: 1px solid #ccc;
+    text-align: right;
+    padding-right: 16px;
+}
+
+.event-box {
+    width: var(--event-box-width, 200px);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.event-box.active li {
+    background-color: var(--event-box-active-bg, #bbd2ff);
+}
+
+.event-box strong {
+    font-size: .8em;
+    font-weight: 600;
+}
+
+.add-btn {
+    display: inline-block;
+    position: absolute;
+    top: calc(100% - 3px);
+    left: 4px;
+    border: none;
+    background: none;
+    font-size: 1.5em;
+    color: #ddd;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+
+@media screen and (max-width: 640px) {
+
+    .day-page {
+        display: block;
+        width: 100%;
+    }
+}

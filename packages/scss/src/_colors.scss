@@ -1,0 +1,14 @@
+$app-background-color: var(--app-background-color, $grayscale_10) !default;
+$app-text-color: var(--app-text-color, $black) !default;
+
+$surface-background-color: var(--surface-background-color, $white) !default;
+$surface-text-color: var(--surface-text-color, $black) !default;
+$surface-light-text-color: var(--surface-light-text-color, $grayscale_20) !default;
+
+$theme-primary-color: var(--theme-primary-color, $primary-color) !default;
+$theme-on-primary-color: var(--theme-on-primary-color, $white) !default;
+$theme-accent-color: var(--theme-accent-color, $accent-color) !default;
+
+$list-item-background-color: var(--list-item-background-color, #fff2) !default;
+$list-item-background-hover-color: var(--list-item-background-hover-color, #fff3) !default;
+

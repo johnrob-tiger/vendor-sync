@@ -1,0 +1,12 @@
+.event-time {
+    display: inline-flex;
+    justify-content: flex-start;
+}
+
+.event-time span {
+    display: inline-block;
+    font-size: .9em;
+}
+.event-time span + span {
+    margin-left: 16px;
+}

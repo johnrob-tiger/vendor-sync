@@ -1,0 +1,54 @@
+.calendar-month-links, 
+.calendar-month-link {
+    display: inline-flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+
+.calendar-month-link {
+    width: 180px;
+    justify-content: flex-start;    
+}
+
+.calendar-last-month-link {
+    padding-left: 42px;
+}
+.calendar-next-month-link {
+    padding-right: 42px;    
+}
+
+.calendar-next-month-link,
+.calendar-last-month-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 36px;
+}
+
+.calendar-next-month-link {
+    text-align: right;
+}
+
+.calendar-next-month-link::after,
+.calendar-last-month-link::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 36px;
+    height: 36px;
+}
+
+.calendar-next-month-link::after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24'%3E%3Cpath d='M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6l-6-6z'/%3E%3C/svg%3E");
+    right: 0;
+}
+
+.calendar-last-month-link::after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24'%3E%3Cpath d='M15.41 7.41L14 6l-6 6l6 6l1.41-1.41L10.83 12l4.58-4.59z'/%3E%3C/svg%3E");    
+    left: 0;
+}

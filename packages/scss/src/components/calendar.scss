@@ -1,0 +1,38 @@
+@import "../variables";
+
+.calendar-layout {
+    padding: 50px;
+    background-color: var(--surface-background-color);
+    color: var(--surface-text-color);
+    border-radius: 24px;
+    display: flex;
+    width: var(--calendar-layout-width, 100%);
+    flex-wrap: wrap;
+
+    h2 {
+        flex: 1 100%;        
+    }
+
+    span {
+        width: calc(100% / 14);
+        display: block;
+        margin: calc(100% / 28);
+        padding: calc(100% / 56) calc(100% / 28);
+        text-indent: -7.5px;
+        text-align: center;
+        transition: background-color 0.2s, color 0.2s;
+        font-size: 1.5em;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+
+        &:hover {
+            font-weight: 900;
+            border-bottom-color: var(--calendar-day-hover-background, #ccc);
+        }
+
+        &:not(.null).selected {
+            background-color: var(--theme-primary-color);
+            color: var(--theme-on-primary-color);
+        }
+    }
+}

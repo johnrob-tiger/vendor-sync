@@ -1,0 +1,114 @@
+.day-page {
+    display: flex; 
+    position: relative;   
+    height: 100vh;
+    display: flex;    
+    --fab-shadow-color: rgba(0, 0, 0, .3);
+    --fab-top: calc(100% - 90px);
+    --fab-left: 20px;
+
+    --form-border-color: white;
+    --form-input-color: white;
+}
+
+.day-page a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.day-page ul {
+    padding: 0;
+    margin: 0;
+}
+
+.day-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;  
+    padding: 50px;
+}
+
+.day-view h2 {
+    margin: 0 0 25px 0;
+    padding: 0;
+    font-size: 1.3em;
+}
+
+.day-view-calendar {
+    flex: 1;
+    display: flex;
+    border-radius: 20px;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 24px;
+}
+
+.time-slots li:nth-child(even):not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 16px;
+}
+
+.events {    
+    display: flex;    
+    background-color: #fff;
+    color: #000;
+    flex: 1;
+    width: 100%;
+}
+
+.events ul > li {
+    position: relative;
+    padding: 8px 16px;
+    width: 150px;
+    border: 1px solid #ccc;
+    margin-left: 16px;
+    font-size: .8em;
+    text-align: left;
+    border-left-width: 8px;
+    border-left-color: #003399;
+}
+
+.event {    
+    padding: 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 580px;
+    background-color: var(--events-bg, #003399);
+    color: var(--events-text, #fff);
+    overflow-y: auto;    
+}
+
+.day-view ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;   
+    font-size: 1em; 
+}
+
+.day-view ul li {
+    height: 50px;    
+}
+
+.day-view ul li.hour {
+    font-weight: 600;
+}
+
+.day-view ul.time-slots li {
+    border-right: 1px solid #ccc;
+    padding-right: 16px;
+}
+
+@media screen and (max-width: 640px) {
+
+    .day-page {
+        display: block;
+        width: 100%;
+    }
+}

@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Calendars]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+	[Title] VARCHAR(250) NOT NULL,
+	[Description] VARCHAR(250) NULL,
+	[TimeZone] VARCHAR(100) NOT NULL,
+	[UserId] INT NULL, 
+    CONSTRAINT [FK_Calendars_User] FOREIGN KEY ([UserId]) REFERENCES [Users]([Id]),
+)

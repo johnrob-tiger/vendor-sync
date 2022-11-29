@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Events]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+	[EventType] VARCHAR(100) NOT NULL,
+	[Args] VARCHAR(2000) NULL,
+	[CorrelationId] VARCHAR(100) NULL,
+	[Created] DATETIME NOT NULL
+)

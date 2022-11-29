@@ -1,0 +1,58 @@
+.fab {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: var(--fab-position, relative);
+    border-radius: 100%;
+    background-color: var(--fab-bg-color, var(--theme-accent-color, #ffc2cc));
+    color: var(--fab-text-color, var(--theme-on-accent-color, #43000b));
+    box-shadow: 6px 6px 8px var(--fab-shadow-color, #aaaaaa);
+    width: var(--fab-size);
+    height: var(--fab-size);
+    border: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 999;
+}
+.fab:hover {
+    background-color: var(--fab-bg-hover-color, var(--theme-accent-hover-color, #ff95a6));
+}
+.fab.fab--md {
+    --fab-size: 60px;
+}
+.fab.fab--lg {
+    --fab-size: 70px;
+}
+.fab.fab--sm {
+    --fab-size: 40px;
+}
+
+.fab--fixed,
+.fab--top-left,
+.fab--top-right,
+.fab--top-center,
+.fab--middle-left,
+.fab--middle-right,
+.fab--middle-middle,
+.fab--bottom-left,
+.fab--bottom-right,
+.fab--bottom-middle {
+    --fab-position: absolute;
+}
+.fab--top-left {
+    top: 0;
+    left: var(--fab-x-offset, 0);
+}
+.fab--top-right {
+    top: 0;
+    left: calc(100% - var(--fab-x-offset, 0));
+}
+.fab--middle-middle {
+    top: 0;
+    left: calc(50% - var(--fab-size) / 2);
+}
+.fab--fixed {
+    left: var(--fab-left, 0) !important;
+    top: var(--fab-top, 0) !important;
+}

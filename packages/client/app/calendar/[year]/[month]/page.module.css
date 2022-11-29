@@ -1,0 +1,57 @@
+.month-page {
+    display: flex; 
+    position: relative;   
+    height: 100vh;
+}
+
+.calendar, .events {
+    padding: 50px;
+    height: 100%;
+}
+
+.calendar {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 0 50px 0;
+}
+
+.calendar-header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.events {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 580px;
+    background-color: var(--events-bg, #003399);
+    color: var(--events-text, #fff);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 640px) {
+
+    .month-page {
+        display: block;
+        width: 100%;
+    }
+
+    .calendar {
+        flex: none;
+        width: 100%;
+    }
+
+    .events {
+        width: 100%;
+    }
+}

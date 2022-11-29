@@ -1,0 +1,21 @@
+.current-event-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.header button {
+    border: 0;
+    background: none;
+    width: 36px;
+    height: 36px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}

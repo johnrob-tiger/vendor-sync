@@ -1,0 +1,62 @@
+$white: #ffffff;
+$black: #000000;
+$primary-color: #000;
+$accent-color: #ff4500;
+
+$grayscale_10: #f4f8ff;
+$grayscale_20: #dfe9ff;
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Roboto', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'sm': 320px,
+  'md': 768px,
+  'lg': 1024px,
+) !default;
+
+/// Typography
+ 
+/* Body */
+$base-font-size: 16px !default;
+$body-font-family: var(--body-font-family, $text-font-stack) !default;
+$body-font-size: var(--body-font-size, $base-font-size) !default;
+$body-font-weight: var(--body-font-weight, 400) !default;
+
+/* Heading */
+$h-1: 1.875rem; // 30px
+$h-2: 1.375rem; // 22px
+$h-3: 1rem; // 16px
+$h-4: 1.125rem; // 18px
+$h-5: 0.75rem; // 12px
+$h-6: 0.75rem; // 12px
+
+$h-1-font-size: var(--h1-font-size, $h-1) !default;
+$h-2-font-size: var(--h2-font-size, $h-2) !default;
+$h-3-font-size: var(--h3-font-size, $h-3) !default;
+$h-4-font-size: var(--h4-font-size, $h-4) !default;
+$h-5-font-size: var(--h5-font-size, $h-5) !default;
+$h-6-font-size: var(--h6-font-size, $h-6) !default;
+
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$fw-black: 900;
+
+$h-1-font-weight: var(--h1-font-weight, $fw-black) !default;
+$h-2-font-weight: var(--h2-font-weight, $fw-semibold) !default;
+$h-3-font-weight: var(--h3-font-weight, $fw-bold) !default;
+$h-4-font-weight: var(--h4-font-weight, $fw-medium) !default;
+$h-5-font-weight: var(--h5-font-weight, $fw-normal) !default;
+$h-6-font-weight: var(--h6-font-weight, $fw-light) !default;
+
+/// Layout
+$layout-header-width: 150px !default;
+

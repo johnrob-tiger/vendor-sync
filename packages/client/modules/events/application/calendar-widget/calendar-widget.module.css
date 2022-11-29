@@ -1,0 +1,87 @@
+.calendar-widget {
+    width: 100%;
+    padding: 50px;
+    background-color: var(--calendar-widget-bg, #fff);
+    color: var(--calendar-widget-text, #000);
+    border-radius: 24px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: var(--calendar-max-width, 100%);    
+}
+
+.full {
+    width: 100%;
+    min-height: var(--calendar-min-height, 800px);
+}
+
+.calendar-widget > div:first-child {
+    flex: 1 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-widget button {
+    border: none;
+    background: none;
+    cursor: pointer;    
+}
+
+.calendar-widget button svg {
+    width: 36px;
+    height: 36px;
+}
+
+.calendar-widget a {
+    display: block;
+    text-indent: -7.5px;
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.calendar-widget.calendar-view a,
+.calendar-widget.calendar-view span {
+    width: calc(100% / 14);    
+    margin: calc(100% / 28);
+    padding: calc(100% / 56) calc(100% / 28);
+    border-radius: 100px;    
+}
+
+.calendar-widget.year-view button,
+.calendar-widget.month-view a {
+    display: inline-block;
+    width: calc(100% / 7);
+    margin: calc(100% / 14);
+    padding: calc(100% / 28) calc(100% / 14);
+    border-radius: 12px;
+    padding: 16px 0;
+    margin: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.calendar-widget.calendar-view a:hover,
+.calendar-widget.month-view a:hover,
+.calendar-widget.year-view button:hover {
+    background-color: var(--calendar-widget-bg-active, #bbd2ff);
+}
+
+.null {
+    color: var(--calendar-widget-header-color, #ddd);    
+}
+.null:hover {
+    color: var(--calendar-widget-text, #000);
+}
+.heading {
+    color: var(--calendar-heading-color, #777);
+}
+
+.heading {
+    cursor: default;
+}
+
+.calendar-widget a.date2 {
+    text-indent: -13.5px;
+}

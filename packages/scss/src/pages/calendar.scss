@@ -1,0 +1,89 @@
+@import "../variables";
+@import "../mixins";
+
+div[data-nextjs-scroll-focus-boundary] {
+    height: 100%;
+}
+
+.app {
+
+    &__content__page {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__calendar {
+        padding: 50px;
+        flex: 2;
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 1em;
+        }
+
+        @include phone-only {
+            width: 100%;
+        }
+    }
+
+    &__events {
+        flex: 1;
+        height: 100%;
+        padding: 50px;
+        overflow: scroll;
+        position: sticky;
+        top: 0;
+        left: 0;
+
+        ul {
+            padding: 50px 0;
+            list-style: none;
+            width: 100%;
+
+            li {
+                padding: 25px;
+                width: 100%;
+                margin-bottom: 20px;
+                border-radius: 24px;                
+                cursor: pointer;
+
+                span.time {
+                    display: inline-block;
+                    width: 75px;
+                }                
+            }
+
+            &.list-placeholder {
+
+                li {
+                    position: relative;
+                    height: 48px;
+                    pointer-events: none;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 12px;
+                        left: 12px;
+                        width: 48px;
+                        height: 24px;
+                        background-color: rgba(255, 255, 255, .05);
+                        border-radius: 24px;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 12px;
+                        left: 78px;
+                        width: calc(65% - 48px);
+                        height: 24px;
+                        background-color: rgba(255, 255, 255, .05);
+                        border-radius: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
